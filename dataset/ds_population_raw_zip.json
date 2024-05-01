@@ -1,0 +1,25 @@
+{
+	"name": "ds_population_raw_zip",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_ablob_covid19sa",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "018 population-by-age.zip",
+				"container": "population"
+			},
+			"columnDelimiter": "\t",
+			"compressionCodec": "ZipDeflate",
+			"compressionLevel": "Optimal",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": []
+	}
+}
