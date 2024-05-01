@@ -1,0 +1,9 @@
+{
+	"name": "covid19datafactoryv2",
+	"location": "centralindia",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "5d38ead1-71b0-4f8f-8375-fee8e9dc2ad2",
+		"tenantId": "8053a638-bf7d-45de-b473-d0db4d3b3b08"
+	}
+}
