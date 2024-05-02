@@ -1,0 +1,35 @@
+{
+	"name": "ds_source_config_file",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_ablob_covid19sa",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Json",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "Config_file.json",
+				"container": "population"
+			}
+		},
+		"schema": {
+			"type": "object",
+			"properties": {
+				"SourceBaseURL": {
+					"type": "string"
+				},
+				"SourceRelativeURL": {
+					"type": "string"
+				},
+				"SinkContainerNm": {
+					"type": "string"
+				},
+				"SinkFileNm": {
+					"type": "string"
+				}
+			}
+		}
+	}
+}

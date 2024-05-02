@@ -53,6 +53,7 @@
 					],
 					"storeSettings": {
 						"type": "AzureBlobStorageReadSettings",
+						"recursive": true,
 						"enablePartitionDiscovery": false
 					},
 					"formatSettings": {
@@ -166,8 +167,18 @@
 							],
 							"outputs": [
 								{
-									"referenceName": "ds_population_raw_tsv",
-									"type": "DatasetReference"
+									"referenceName": "ds_ecdc_raw_data_sink",
+									"type": "DatasetReference",
+									"parameters": {
+										"ContainerName": {
+											"value": "@pipeline().parameters.SinkContainerNm",
+											"type": "Expression"
+										},
+										"FileName": {
+											"value": "@pipeline().parameters.SinkFileNm",
+											"type": "Expression"
+										}
+									}
 								}
 							]
 						},
@@ -214,6 +225,14 @@
 				}
 			}
 		],
+		"parameters": {
+			"SinkContainerNm": {
+				"type": "string"
+			},
+			"SinkFileNm": {
+				"type": "string"
+			}
+		},
 		"annotations": []
 	}
 }
